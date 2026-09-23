@@ -25,7 +25,7 @@ disable-model-invocation: true
 | Board phase | Next |
 |-------------|------|
 | none / missing CONTEXT | `/context` |
-| none | `/brief DEV-12345` |
+| none | `/brief` + ticket details |
 | briefed | `/make` |
 | making | finish `/make`, then `/prove` |
 | proving | finish `/prove` (or `/fix`) |

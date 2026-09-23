@@ -3,7 +3,7 @@
 Agent Skills for BB FE repos. State lives in `.cursor/bbflow/` in each repo.
 
 ```
-/context → /brief DEV-123 → /make → /prove → /review
+/context → /brief + ticket details → /make → /prove → /review
 /fix anytime · /kit for UI kit · /bb = status
 ```
 
@@ -13,7 +13,7 @@ Agent Skills for BB FE repos. State lives in `.cursor/bbflow/` in each repo.
 |---------|--------------|
 | `/context` | Builds `CONTEXT.md` for the repo |
 | `/bb` | Status and next step |
-| `/brief DEV-123` | Brief and branch name from the Jira ticket |
+| `/brief` | Brief and branch name from the ticket details you paste |
 | `/make` | Implements the brief |
 | `/prove` | Lint, types, build, UI check |
 | `/review` | PR review |

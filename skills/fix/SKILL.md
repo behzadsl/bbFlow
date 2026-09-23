@@ -1,6 +1,6 @@
 ---
 name: fix
-description: Find and fix a bug's root cause, then hand off to /prove. Use when the user runs /fix, reports broken behaviour, or pastes a bug ticket.
+description: Find and fix a bug's root cause from pasted ticket details, then hand off to /prove. Use when the user runs /fix, reports broken behaviour, or pastes a bug ticket.
 disable-model-invocation: true
 ---
 
@@ -9,8 +9,8 @@ disable-model-invocation: true
 ## Steps
 
 1. Read `AGENTS.md` if present and `.cursor/bbflow/CONTEXT.md`.
-2. If given a Jira key, fetch the ticket (ITS: follow the `[SD]` DEV link). With no brief, create a minimal `BRIEF.md` (Goal, Acceptance) and suggest a `bugfix/` or `hotfix/` branch.
-3. Capture expected vs actual, repro steps, console/network errors, environment.
+2. **Ticket details come from the user.** Do not fetch Jira. If missing, ask for: key (DEV, not ITS), expected vs actual, repro steps, console/network errors, environment.
+3. With no brief, create a minimal `BRIEF.md` (Goal, Acceptance) and suggest a `bugfix/` or `hotfix/` branch.
 4. Form 1–3 hypotheses and check the cheapest evidence first:
    - **Data:** epic `catchError` swallowing errors, wrong `@utils/paths` URL, payload shape, reducer flags (`fetching`/`fetched`/`failed`) not reset, selector memoization
    - **UI:** installed kit version vs kit source, `classnames` conditions, Less specificity, antd 4 overrides
