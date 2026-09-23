@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 ## Steps
 
-1. Look for `.cursor/bbflow/BOARD.md`. If it is missing, say bbFlow has not started here and suggest `/context`.
+1. Look for `.cursor/bbflow/BOARD.md`. If it is missing, say bbFlow has not started here and suggest `/bb-context`.
 2. Read the board, plus `BRIEF.md` and `CONTEXT.md` in the same folder if present.
 3. Check `git branch --show-current` and `git status --short`.
 4. Reply with a short status:
@@ -24,12 +24,12 @@ disable-model-invocation: true
 
 | Board phase | Next |
 |-------------|------|
-| none / missing CONTEXT | `/context` |
-| none | `/brief` + ticket details |
-| briefed | `/make` |
-| making | finish `/make`, then `/prove` |
-| proving | finish `/prove` (or `/fix`) |
-| proved | `/review` |
-| reviewed, with blockers | `/make` or `/fix` |
-| reviewed (kit) | `/kit` to release and bump consumers |
-| reviewed | done, or `/brief` for the next ticket |
+| none / missing CONTEXT | `/bb-context` |
+| none | `/bb-brief` + ticket details |
+| briefed | `/bb-make` |
+| making | finish `/bb-make`, then `/bb-prove` |
+| proving | finish `/bb-prove` (or `/bb-fix`) |
+| proved | `/bb-review` |
+| reviewed, with blockers | `/bb-make` or `/bb-fix` |
+| reviewed (kit) | `/bb-kit` to release and bump consumers |
+| reviewed | done, or `/bb-brief` for the next ticket |

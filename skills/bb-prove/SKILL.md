@@ -1,10 +1,10 @@
 ---
-name: prove
-description: Verify the current bbFlow change against the brief acceptance. Use when the user runs /prove or wants to confirm a change works.
+name: bb-prove
+description: Verify the current bbFlow change against the brief acceptance. Use when the user runs /bb-prove or wants to confirm a change works.
 disable-model-invocation: true
 ---
 
-# /prove: check the change
+# /bb-prove: check the change
 
 ## Steps
 
@@ -38,7 +38,7 @@ command → result
 - …
 ```
 
-8. Update the board: **pass** → Phase `proved`, Next `/review`. **fail or partial** → Phase `making`, Next the fix, then `/prove` (or `/fix` if the cause is unclear).
+8. Update the board: **pass** → Phase `proved`, Next `/bb-review`. **fail or partial** → Phase `making`, Next the fix, then `/bb-prove` (or `/bb-fix` if the cause is unclear).
 
 ## Rules
 

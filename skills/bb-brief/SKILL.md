@@ -1,14 +1,14 @@
 ---
-name: brief
-description: Turn pasted ticket details into .cursor/bbflow/BRIEF.md with a branch name. Use when the user runs /brief or starts a new ticket.
+name: bb-brief
+description: Turn pasted ticket details into .cursor/bbflow/BRIEF.md with a branch name. Use when the user runs /bb-brief or starts a new ticket.
 disable-model-invocation: true
 ---
 
-# /brief: plan the ticket
+# /bb-brief: plan the ticket
 
 ## Steps
 
-1. Read `.cursor/bbflow/CONTEXT.md`. If missing, run the `/context` steps first.
+1. Read `.cursor/bbflow/CONTEXT.md`. If missing, run the `/bb-context` steps first.
 2. **Ticket details come from the user.** Do not fetch Jira. If they are missing, ask for: key, title, description, acceptance criteria, Figma link. With an ITS key, ask for the linked `[SD]` DEV key. With no ticket, use `NO TASK`.
 3. If the goal is still unclear, ask up to **3** short questions.
 4. Identify the affected areas. Flag if the change **needs a kit change first**, and whether BE work is pending.
@@ -53,15 +53,15 @@ Assumptions, BE status, kit dependency, risks, open questions.
 - **Base:** develop | master | staging
 - **Phase:** briefed
 - **Updated:** YYYY-MM-DD
-- **Next:** /make
+- **Next:** /bb-make
 
 ## History
 - YYYY-MM-DD briefed · DEV-12345
 ```
 
-8. Stop. Next step is `/make`.
+8. Stop. Next step is `/bb-make`.
 
 ## Rules
 
 - Keep the brief under about 50 lines.
-- Do not write app code in `/brief`.
+- Do not write app code in `/bb-brief`.

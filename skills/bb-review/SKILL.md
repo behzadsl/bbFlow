@@ -1,10 +1,10 @@
 ---
-name: review
-description: Review the current diff against BB rules and write .cursor/bbflow/REVIEW.md. Use when the user runs /review or wants a PR review.
+name: bb-review
+description: Review the current diff against BB rules and write .cursor/bbflow/REVIEW.md. Use when the user runs /bb-review or wants a PR review.
 disable-model-invocation: true
 ---
 
-# /review: PR review
+# /bb-review: PR review
 
 ## Steps
 
@@ -54,7 +54,7 @@ approve | approve-with-nits | request-changes
 - …
 ```
 
-5. Update the board: **Phase** `reviewed`; Next `/make` or `/fix` if there are blockers, otherwise `/kit` for kit repos or done.
+5. Update the board: **Phase** `reviewed`; Next `/bb-make` or `/bb-fix` if there are blockers, otherwise `/bb-kit` for kit repos or done.
 6. In chat, show the verdict and blockers.
 
 ## Rules

@@ -1,10 +1,10 @@
 ---
-name: kit
-description: Link, release, or bump @bbdevcrew/bb_ui_kit_fe. Use when the user runs /kit or asks to link, release, or bump the UI kit.
+name: bb-kit
+description: Link, release, or bump @bbdevcrew/bb_ui_kit_fe. Use when the user runs /bb-kit or asks to link, release, or bump the UI kit.
 disable-model-invocation: true
 ---
 
-# /kit: UI kit release and bump
+# /bb-kit: UI kit release and bump
 
 Modes: **link**, **release**, **bump**.
 

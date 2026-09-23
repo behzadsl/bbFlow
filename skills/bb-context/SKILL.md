@@ -1,10 +1,10 @@
 ---
-name: context
-description: Build or refresh .cursor/bbflow/CONTEXT.md by merging BB-RULES.md with the repo's AGENTS.md and configs. Use when the user runs /context or asks which BB rules apply.
+name: bb-context
+description: Build or refresh .cursor/bbflow/CONTEXT.md by merging BB-RULES.md with the repo's AGENTS.md and configs. Use when the user runs /bb-context or asks which BB rules apply.
 disable-model-invocation: true
 ---
 
-# /context: BB repo rules
+# /bb-context: BB repo rules
 
 **Priority (highest wins):**
 
@@ -59,8 +59,8 @@ disable-model-invocation: true
    Prove defaults by kind:
    - **app:** `npx eslint <changed files>`, `npx tsc --noEmit -p .`, manual UI check via `yarn start` (port 3003); `yarn build` for wide changes; Cypress only when asked or when `[e2e]` is needed.
    - **kit:** `npx eslint <changed files>`, `yarn build`, Storybook check for visual components, `src/index.ts` exports present.
-7. Make sure `.cursor/bbflow/BOARD.md` exists (Phase `none`, Next `/brief`).
-8. Reply briefly: kind, override on/off, default base, next step `/brief`.
+7. Make sure `.cursor/bbflow/BOARD.md` exists (Phase `none`, Next `/bb-brief`).
+8. Reply briefly: kind, override on/off, default base, next step `/bb-brief`.
 
 ## Rules
 
