@@ -28,11 +28,11 @@ Agent Skills for BB FE repos. State lives in `.cursor/bbflow/` in each repo.
 
 ## Install
 
-```powershell
-./install.ps1
+```bash
+npx skills add behzadsl/bbFlow -g -y
 ```
 
-Copies `skills/*` to `~/.cursor/skills/`. Open a new chat, then run `/context` in the repo.
+Update with `npx skills update`. Open a new chat, then run `/context` in the repo.
 
 ## Files (`.cursor/bbflow/`)
 
