@@ -1,0 +1,45 @@
+# bbFlow
+
+Agent Skills for BB FE repos. State lives in `.cursor/bbflow/` in each repo.
+
+```
+/context → /brief DEV-123 → /make → /prove → /review
+/fix anytime · /kit for UI kit · /bb = status
+```
+
+## Commands
+
+| Command | What it does |
+|---------|--------------|
+| `/context` | Builds `CONTEXT.md` for the repo |
+| `/bb` | Status and next step |
+| `/brief DEV-123` | Brief and branch name from the Jira ticket |
+| `/make` | Implements the brief |
+| `/prove` | Lint, types, build, UI check |
+| `/review` | PR review |
+| `/fix` | Bug fix loop |
+| `/kit` | UI kit link, release, and bump |
+
+## Rules priority
+
+1. Repo `AGENTS.md`
+2. Repo configs
+3. `skills/context/BB-RULES.md`
+
+## Install
+
+```powershell
+./install.ps1
+```
+
+Copies `skills/*` to `~/.cursor/skills/`. Open a new chat, then run `/context` in the repo.
+
+## Files (`.cursor/bbflow/`)
+
+| File | Written by |
+|------|------------|
+| `CONTEXT.md` | `/context` |
+| `BOARD.md` | all |
+| `BRIEF.md` | `/brief` |
+| `PROVE.md` | `/prove` |
+| `REVIEW.md` | `/review` |

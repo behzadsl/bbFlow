@@ -1,0 +1,26 @@
+---
+name: fix
+description: Find and fix a bug's root cause, then hand off to /prove. Use when the user runs /fix, reports broken behaviour, or pastes a bug ticket.
+disable-model-invocation: true
+---
+
+# /fix: debug
+
+## Steps
+
+1. Read `AGENTS.md` if present and `.cursor/bbflow/CONTEXT.md`.
+2. If given a Jira key, fetch the ticket (ITS: follow the `[SD]` DEV link). With no brief, create a minimal `BRIEF.md` (Goal, Acceptance) and suggest a `bugfix/` or `hotfix/` branch.
+3. Capture expected vs actual, repro steps, console/network errors, environment.
+4. Form 1–3 hypotheses and check the cheapest evidence first:
+   - **Data:** epic `catchError` swallowing errors, wrong `@utils/paths` URL, payload shape, reducer flags (`fetching`/`fetched`/`failed`) not reset, selector memoization
+   - **UI:** installed kit version vs kit source, `classnames` conditions, Less specificity, antd 4 overrides
+   - **i18n:** missing key or wrong namespace
+   - **Recent change:** `git log -p -- <file>` for related `DEV-` commits
+5. Fix the **root cause**, not the symptom, unless the user asks for a temporary guard. If the bug is in the kit, fix it there and note `/kit` is needed.
+6. Log it in `.cursor/bbflow/BOARD.md` (or `FIX.md` if longer): symptom, root cause, fix.
+7. Set board **Next** to `/prove`, and stop unless the user says to continue.
+
+## Rules
+
+- No new features under `/fix`. If the behaviour was never defined, route to `/brief`.
+- Suggest a regression check for `/prove` (manual steps or a Cypress spec).
