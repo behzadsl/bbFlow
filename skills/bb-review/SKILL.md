@@ -9,7 +9,7 @@ disable-model-invocation: true
 ## Steps
 
 1. Read `AGENTS.md`, `.cursor/bbflow/CONTEXT.md`, `BRIEF.md`, `PROVE.md` if present, and `.github/pull_request_template.md`.
-2. **Ask what to compare against** unless the user already said: default base from CONTEXT, working tree only, or a PR number (`gh pr diff <n>`). Never pick silently.
+2. **Ask what to compare against** unless the user already said: default base from CONTEXT (without CONTEXT: `git symbolic-ref --short refs/remotes/origin/HEAD`), working tree only, or a PR number (`gh pr diff <n>`). Never pick silently.
 3. Review, in this order:
    - **Correctness** against the brief and Jira AC
    - **Bugs and edge cases:** loading, empty, and error states; epics that never dispatch a `…Fail`; stale selectors; missing hook deps; unsubscribed observables
